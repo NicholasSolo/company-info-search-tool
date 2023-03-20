@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Продвинутый вариант</title>
+    <link rel="stylesheet" href="../style.css">
+    <script src="../js/componentConstructor.js" type="module" defer></script>
+    <script src="../js/main.js" type="module" defer></script>
+</head>
+
+<body>
+    <div id="app2">
+    </div>
+
+    <template id="advanced">
+        <style>
+            .search-wrapper {
+                position: relative;
+            }
+
+            .search-wrapper .options-list {
+                display: none;
+                margin: 0;
+                padding: 0;
+                list-style: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 90%;
+                max-height: 40vh;
+                border: 1px solid #c4c4c4;
+                overflow-y: scroll;
+                background-color: #ffff;
+            }
+
+            .search-wrapper .options-list.visible {
+                display: block;
+            }
+
+            .search-wrapper .options-list .list-item {
+                padding: 3px;
+                cursor: pointer;
+            }
+
+            .search-wrapper .options-list .list-item:hover {
+                background-color: #94ddff;
+            }
+
+            .search-wrapper .options-list .list-item .other {
+                color: #4b4b4b;
+            }
+
+            .search-wrapper .search-input {
+                width: 90%;
+            }
+        </style>
+        <div class="search-wrapper">
+            <input type="text" class="search-input" placeholder="Введите назавние компании">
+            <ul class="options-list">
+            </ul>
+        </div>
+    </template>
+
+</body>
+
+</html>
